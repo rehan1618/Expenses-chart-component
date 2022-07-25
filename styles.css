@@ -1,0 +1,165 @@
+:root {
+  --font-family: 'DM Sans', sans-serif;
+  --primary-soft-red: hsl(10, 79%, 65%);
+  --primary-cyan: hsl(186, 34%, 60%);
+  --neutral-dark-brown: hsl(25, 47%, 15%);
+  --neutral-medium-brown: hsl(28, 10%, 53%);
+  --neutral-cream: hsl(27, 66%, 92%);
+  --neutral-very-pale-orange: hsl(33, 100%, 98%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: var(--font-family);
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  align-items: center;
+  gap: 3rem;
+  justify-content: center;
+  background-color: var(--neutral-cream);
+}
+
+.balance-main-container {
+  width: clamp(35rem, 39vw, 56rem);
+  height: clamp(7rem, 10vw, 12rem);
+  background-color: var(--primary-soft-red);
+  border-radius: 2rem;
+  display: flex;
+  justify-content: space-between;
+  padding-block: 3rem;
+  padding-inline: 3rem;
+  align-items: center;
+}
+
+.balance-container {
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+}
+
+.title {
+  font-size: clamp(1.3rem, 2vw, 2rem);
+}
+
+.balance {
+  font-size: clamp(2rem, 2.5vw, 4.5rem);
+}
+
+.logo {
+  width: clamp(5.2rem, 5vw, 7.2rem);
+}
+
+.card {
+  width: clamp(35rem, 39vw, 56rem);
+  height: clamp(38rem, 39vw, 50rem);
+  border-radius: 2rem;
+  background-color: #fff;
+  padding-block: clamp(1.5rem, 2vw, 3rem);
+  padding-inline: clamp(1.5rem, 2vw, 3rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.heading {
+  font-size: clamp(1.9rem, 2.5vw, 3.5rem);
+  color: var(--neutral-dark-brown);
+}
+
+.chart {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  height: clamp(25rem, 30vw, 30rem);
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--neutral-cream);
+}
+
+.days {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  align-items: center;
+  width: clamp(4rem, 5vw, 7rem);
+  cursor: pointer;
+}
+
+.day-expanse {
+  font-size: clamp(0.8rem, 1.1vw, 1.5rem);
+  padding: 0.5rem;
+  color: #fff;
+  background-color: var(--neutral-dark-brown);
+  border-radius: clamp(0.4rem, 1vw, 0.8rem);
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.5s ease;
+}
+
+.visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+.day {
+  font-size: 1.5rem;
+}
+
+.bar {
+  width: 80%;
+  height: 2rem;
+  background-color: var(--primary-soft-red);
+  transition: 0.5s;
+}
+
+.analysis-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.total-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  justify-content: flex-end;
+}
+
+.total-title {
+  font-size: clamp(1.5rem, 1.5vw, 2rem);
+  color: var(--neutral-medium-brown);
+}
+
+.total {
+  font-size: clamp(1.5rem, 2.5vw, 3.5rem);
+  color: var(--neutral-dark-brown);
+  font-weight: 700;
+}
+
+.change-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.change {
+  font-size: clamp(1.5rem, 1.5vw, 2rem);
+  font-weight: 800;
+  color: var(--neutral-dark-brown);
+}
+
+.month {
+  font-size: clamp(1.5rem, 1.5vw, 2rem);
+  color: var(--neutral-medium-brown);
+}
